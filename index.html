@@ -1,0 +1,542 @@
+<%@ Language=Inherit from Web site %><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Liceul &quot;Dimitrie Cantemir&quot; Babadag</title>
+<link rel="stylesheet" type="text/css" href="Fisier/pro_dropdown_2.css" />
+<script src="Fisier/stuHover.js" type="text/javascript"></script>
+<script type="text/javascript">
+// Creaza matricele cu zilele saptamanii si lunile anului
+var ziarray=new Array("Duminic&#259;", "Luni", "Mar&#355;i", "Miercuri", "Joi", "Vineri", "S&#226;mb&#259;t&#259;")
+var lunaarray=new Array("Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie")
+
+// Functia care preia datele (an, luna, zi, ora)
+function datacom() {
+  var mydate=new Date()
+  var year=mydate.getYear()
+  if (year < 1000)
+    year+=1900
+  var day=mydate.getDay()
+  var month=mydate.getMonth()
+  var daym=mydate.getDate()
+  if (daym<10)
+    daym="0"+daym
+  var hours=mydate.getHours()
+  var minutes=mydate.getMinutes()
+  var seconds=mydate.getSeconds()
+  var dn="AM"
+  if (hours>=12)
+    dn="PM"
+  if (hours>12) {
+    hours=hours-12
+  }
+  if (hours==0)
+    hours=12
+  if (minutes<=9)
+    minutes="0"+minutes
+  if (seconds<=9)
+    seconds="0"+seconds
+
+// Aici poti modifica marime si tipul fontului
+  var cdate="<small><font color='#fefefe' face='Arial'><b>"+ziarray[day]+", "+daym+" "+lunaarray[month]+" "+year+"<br> Ora: "+hours+":"+minutes+":"+seconds+" "+dn
++"</b></font></small>"
+
+// Afiseaza datele in elementul HTML cu id=dataora
+  document.getElementById("dataora").innerHTML=cdate
+}
+
+// Daca elementul HTML cu id=dataora exista
+// Executa functia datacom() la fiecare secunda
+function arata() {
+  if (document.getElementById("dataora"))
+    setInterval("datacom()",1000)
+}
+window.onload=arata;
+</script>
+
+<SCRIPT TYPE="text/javascript">
+<!--
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=900,height=610,scrollbars=yes');
+return false;
+}
+function popupMic(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=700,height=500,scrollbars=no');
+return false;
+}
+//-->
+</SCRIPT>
+
+<meta name="description" content="Pagina Web a Liceului &quot;Dimitrie Cantemir&quot; Babadag">
+<meta name="keywords" content="liceul dimitrie cantemir babadag,liceul dimitrie cantemir, liceul babadag, cantemirbabadag, liceu, licee, educatie, elevi, profesori, scoli, informatii, activitati, orare, raport, organigrama, prezentare" >
+<link rel="stylesheet" type="text/css" href="Fisier/default.css">
+<link rel="stylesheet" type="text/css" href="Fisier/legatura.css">
+
+</head>
+
+<body style="margin: 2px;" topmargin="2" leftmargin="2" bgcolor="#666633" background="Imagini/cer12.gif">
+<table border="0" width="100%" id="table2" bgcolor="#666699" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+		<p align="center" style="margin-top: 0; margin-bottom: 0">
+<img border="0" src="Imagini/antet.jpg" width="1074" height="140"></td>
+	</tr>
+</table>
+<p align="center" style="margin-top: 0; margin-bottom: 0">
+<div align="center">
+<table border="0" width="1071" id="table1" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+
+		 <span class="preload1"></span>
+         <span class="preload2"></span>
+         <ul id="nav">
+	<li class="top">
+	<p style="margin-top: 0; margin-bottom: 0"><a href="index.html" class="top_link" target="_self"><span>
+	Home</span></a></li>
+		<li class="top">
+		<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo22" id="prezentare" class="top_link"><span class="down">
+		Prezentare</span></a>
+		<ul class="sub">
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="contact.html" target="I11">
+			Contact</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Imagini/istoric.jpg" target="I11">
+			Istoric</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="organigrama.html" target="I11">
+			Organigrama</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="prezentare.html" target="I11">
+			Prezentarea liceului</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo3" class="fly">
+			Oferta 2017/2018</a>
+					<ul>
+						<li>
+			            <p style="margin-top: 0; margin-bottom: 0"><a href="Oferta/Invitatie Liceu.gif" target="_blank">
+						Invita&#355;ie liceu</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Oferta/afis.pdf" target="_blank">
+						Afi&#351; ofert&#259; educa&#355;ional&#259;</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Oferta/pliant.pdf" target="_blank">
+						Pliant ofert&#259; educa&#355;ional&#259;</a></li>
+					</ul>
+			</li>
+			
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Galerie Foto/index.htm" target="I11">
+			Galerie foto</a></li>
+		</ul>
+	</li>
+			<li class="top">
+			<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo22" id="examene" class="top_link"><span class="down">
+			Examene</span></a>
+		<ul class="sub">
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="admitere.html" target="I11">
+			Admitere</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="bac.html" target="I11">
+			Bacalaureat</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="olimpiada.html" target="I11">
+			Olimpiade &#351;i concursuri &#351;colare</a></li>
+		</ul>
+	</li>
+	<li class="top">
+	<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo2" id="elevi" class="top_link"><span class="down">
+	Elevi</span></a>
+		<ul class="sub">
+
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo3" class="fly">
+			Colectiv clase</a>
+					<ul>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl9A.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a IX-a A</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl9B.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a IX-a B</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl9C.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a IX-a C</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl9D.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a IX-a D</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl10A.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a X-a A</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl10B.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a X-a B</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl10C.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a X-a C</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl10D.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a X-a D</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl11A.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XI-a A</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl11B.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XI-a B</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl11C.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XI-a C</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl11D.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XI-a D</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl12A.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XII-a A</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl12B.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XII-a B</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl12C.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XII-a C</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl12D.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XII-a D</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl12E.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XII-a E</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl11seral.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XI-a Seral</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl12seral.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XII-a Seral</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl9FR.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a IX-a FR</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl10FR.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a X-a FR</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Colectiv/Cl11FR.jpg" target="_blank" onClick="return popupMic(this, 'notes')">
+						Clasa a XI-a FR</a></li>
+					</ul>
+			</li>
+			
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo3" class="fly">
+			Calendar activit&#259;&#355;i</a>
+					<ul>
+						<li>
+			            <p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/calendar educ sem I.pdf" target="_blank">
+						Calendar semestrul I</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Calendarul activitatilor educative _2.pdf" target="_blank">
+						Calendar semestrul II</a></li>
+					</ul>
+			</li>
+			
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo3" class="fly">
+			Planificare teze</a>
+					<ul>
+						<li>
+			            <p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Teza_I.pdf" target="_blank">
+						Semestrul I</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Teza_II.pdf" target="_blank">
+						Semestrul II</a></li>
+					</ul>
+			</li>
+			
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo3" class="fly">
+			Burse</a>
+					<ul>
+						<li>
+			            <p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/BURSE MERIT METODOLOGIE.pdf" target="_blank">
+						Burse de merit</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/criterii acordare burse.pdf" target="_blank">
+						Criterii burse</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="http://banideliceu.edu.ro/Rapoarte2015/UnitatiSolicitanti/TL/11031437/index.html" target="_blank">
+						Bani de liceu</a></li>
+					</ul>
+			</li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo3" class="fly">
+			Religie</a>
+					<ul>
+						<li>
+			            <p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/religie ordin.pdf" target="_blank">
+						Studiu religie-metodologie</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/cerere religie.pdf" target="_blank">
+						Cerere studiu religie</a></li>
+					</ul>
+			</li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Cod etica elevi.pdf" target="_blank">
+			Cod etic&#259; elevi</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Proceduri de actiune in cazul actelor de violenta.pdf" target="_blank">
+			Procedur&#259; violen&#355;&#259;</a></li>
+            <li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="revista.html" target="I11">
+			Revista liceului</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Regulament_OI.pdf" target="_blank">
+			Regulament de ordine interioar&#259;</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="elev.html" target="I11">
+			Pagina elevului</a></li>
+		</ul>
+	</li>
+	
+	<li class="top">
+	<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo2" id="profesori" class="top_link"><span class="down">
+	Profesori</span></a>
+		<ul class="sub">
+            <li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Catedre.pdf" target="_blank">
+			Catedre liceu</a></li>
+            <li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo3" class="fly">
+			Calendar activit&#259;&#355;i</a>
+					<ul>
+						<li>
+			            <p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/calendar educ sem I.pdf" target="_blank">
+						Calendar semestrul I</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Calendarul activitatilor educative _2.pdf" target="_blank">
+						Calendar semestrul II</a></li>
+					</ul>
+			</li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Cod etic profesori.pdf" target="_blank">
+			Cod etic profesori</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Comisii_liceu.pdf" target="_blank">
+			Comisii de lucru</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/procedura_ABSENTEISM.pdf" target="_blank">
+			Procedura absenteism</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Proceduri de actiune in cazul actelor de violenta.pdf" target="_blank">
+			Procedur&#259; violen&#355;&#259;</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="profesor.html" target="I11">
+			Pagina profesorului</a></li>
+		</ul>
+	</li>
+	
+	<li class="top">
+	<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo2" id="orar" class="top_link"><span class="down">
+	Orar</span></a>
+		<ul class="sub">
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo3" class="fly">
+			Orar &#351;colar</a>
+					<ul>
+						<li>
+			            <p style="margin-top: 0; margin-bottom: 0"><a href="Orar/Dimineata/index.html" target="I11">
+						Orar diminea&#355;a</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Orar/Dupaamiaza/index.html" target="I11">
+						Orar dup&#259;amiaz&#259;</a></li>
+					</ul>
+			</li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/ORAR_2017_Liceul Dimitrie Cantemir    Babadag.xlsx" target="_blank">
+			Orar sem. II nou</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/PRACTICA COMASATA.pdf" target="_blank">
+			Grafic stagii de practic&#259;</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Serviciu_profesor.pdf" target="_blank">
+			Orar serviciu profesori</a></li> 
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Serviciu_elevi.pdf" target="_blank">
+			Orar serviciu elevi </a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/PREGATIRE BAC.pdf" target="_blank">
+			Grafic preg&#259;tire bacalaureat </a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Program remedial.pdf" target="_blank">
+			Program remedial </a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Grafic consiliere.pdf" target="_blank">
+			Grafic consiliere </a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/repartitie clase.pdf" target="_blank">
+			Reparti&#355;ia claselor</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/PLAN  ORE CONSULTATII.pdf" target="_blank">
+			Orar consultan&#355;&#259; cu p&#259;rin&#355;ii</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Saptamana_Altfel.pdf" target="_blank">
+			Program &#350;coala Altfel</a></li> 
+			
+		</ul>
+	</li> 
+
+    </li>
+	<li class="top">
+	<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo22" id="rapoarte" class="top_link"><span class="down">
+	Rapoarte</span></a>
+		<ul class="sub">
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/PAS.pdf" target="_blank">
+			PAS</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Raport activitate Sem I.pptx" target="_blank">
+			Raport activitate sem I</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/RAPORT BAC.pdf" target="_blank">
+			Raport bacalaureat</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/plan managerial.pdf" target="_blank">
+			Plan managerial</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Raport_CEAC.pdf" target="_blank">
+			Raport CEAC</a></li>
+		</ul>
+	</li>
+
+</li>
+	<li class="top">
+	<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo22" id="informatii" class="top_link"><span class="down">
+	Informa&#355;ii</span></a>
+		<ul class="sub">
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Concurs bibliotecar.pdf" target="_blank">
+			Concurs bibliotecar</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo3" class="fly">
+			Buget</a>
+					<ul>
+						<li>
+			            <p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/buget de stat.pdf" target="_blank">
+						Buget de stat</a></li>
+						<li>
+						<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/buget local.pdf" target="_blank">
+						Buget local</a></li>
+					</ul>
+			</li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Tematica CA.pdf" target="_blank">
+			Tematic&#259; CA</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Anunt_FR.pdf" target="_blank">
+			Anun&#355; FR</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Anunt inscriere bac.pdf" target="_blank">
+			Anun&#355; &#238;nscriere bacalaureat</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/CERERE BAC 2015.pdf" target="_blank">
+			Cerere &#238;nscriere bacalaureat</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_PDF/Tematica_CP.pdf" target="_blank">
+			Tematica CP</a></li>
+			
+		</ul>
+	</li>
+    	<li class="top">
+	<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo22" id="gradinita" class="top_link"><span class="down">
+	Gr&#259;dini&#355;a</span></a>
+		<ul class="sub">
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_html/Gradinita 1.html" target="_blank" onClick="return popupMic(this, 'notes')">
+			Gr&#259;dini&#355;a nr.1</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Fisier_html/Gradinita 3.html" target="_blank" onClick="return popupMic(this, 'notes')">
+			Gr&#259;dini&#355;a nr.3</a></li>
+		</ul>
+	</li>
+	    	<li class="top">
+	<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo22" id="gradinita" class="top_link"><span class="down">
+	Absolvire</span></a>
+		<ul class="sub">
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="Absolvire 12D_2017/index.htm" target="I11">
+			Promo&#355;ia 2017-Clasa 12D</a></li>
+		</ul>
+	</li>
+		<li class="top">
+	<p style="margin-top: 0; margin-bottom: 0"><a href="#nogo53" id="shop" class="top_link"><span class="down">
+	Shop</span></a>
+		<ul class="sub">
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="http://www.bibnat.ro/" target="_blank">
+			Biblioteca na&#355;ional&#259;</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="http://www.e-scoala.ro/biblioteca/" target="_blank">
+			Biblioteca online</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="http://dexonline.ro/" target="_blank">
+			Dex online</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="http://www.dictionar.us/" target="_blank">
+			Dic&#355;ionar online</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="http://www.librarie.net/edituri.php?nia=86&niaad=edituri_edituri&niaadgr=edituri&gclid=CJXe6Zrn-qMCFdyQzAodJzRxHA" target="_blank">
+			Edituri</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="https://translate.google.com/#en|ro|" target="_blank">
+			Google Traducere</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="http://www.libris.ro/noutati.htm?gclid=COWJlNbm-qMCFQYf3wodjjGiGw" target="_blank">
+			Libr&#259;rii online</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="https://ro.wikipedia.org/wiki/Pagina_principal%C4%83" target="_blank">
+			Wikipedia</a></li>
+		</ul>
+	</li>
+	
+</ul>
+
+
+		</td>
+	</tr>
+	<tr>
+		<td width="1071" background="Imagini/fundal.gif" valign="top">
+		
+		<iframe name="I11" width="1063" height="774" src="Fisier_html/index_principal.htm" marginwidth="5" marginheight="5">
+		Your browser does not support inline frames or is currently configured not to display inline frames.
+		</iframe></td>
+	</tr>
+</table>
+
+</div>
+
+<p style="margin-top: 0; margin-bottom: 0">
+
+</p>
+
+<p align="center" style="margin-top: 0; margin-bottom: 0">
+<img border="0" src="Imagini/subsol.jpg" width="1072" height="56"></p>
+
+
+
+</body>
+
+</html>
